@@ -13,12 +13,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Schema
-let userSchema = new Schema({
+let UserSchema = new Schema({
   username: {type: String, required: true },
   password: {type: String, required: true},
   email: {type: String, required: true}
 });
 
 // Export the model so its publicly available.
-module.exports = mongoose.model('User', EmployeeSchema);
+module.exports = mongoose.model('User', UserSchema);
 
