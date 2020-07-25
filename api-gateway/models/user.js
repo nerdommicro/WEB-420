@@ -22,3 +22,10 @@ let UserSchema = new Schema({
 // Export the model so its publicly available.
 module.exports = mongoose.model('User', UserSchema);
 
+module.exports.add = (user, callback) => { 
+  user.save(callback);
+};
+module.exports.getById = (id, callback) => { 
+  var query = { _id: id };
+  User.findById(query, callback);
+};
